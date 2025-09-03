@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapeX - الحل الرقمي الأذكى للكافيهات والمطاعم</title>
+    <link rel="icon" type="image/png" href="images/tablogo.png">
+    <link rel="apple-touch-icon" href="images/tablogo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/work-steps.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="#" class="logo-link">
+                        <img src="images/logo.png" alt="SnapeX Logo" class="logo-img">
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="#home" class="nav-link active" data-i18n="home">الرئيسية</a>
+                    <a href="#about" class="nav-link" data-i18n="about">من نحن</a>
+                    <a href="#services" class="nav-link" data-i18n="services">خدماتنا</a>
+                    <a href="#features" class="nav-link" data-i18n="features">مميزتنا</a>
+                    <a href="#evolution" class="nav-link" data-i18n="evolution">تطورتنا</a>
+                    <a href="#contact" class="nav-link" data-i18n="contact">تواصل معنا</a>
+                </div>
+                <div class="header-right">
+                    <!-- Menu Toggle Checkbox (must be before .nav-links for CSS sibling selector) -->
+                    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+                    <label for="menu-toggle" class="menu-toggle-label" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                    
+                    <div class="language-switcher">
+                        <button id="langToggle" class="lang-btn" data-lang="ar">
+                            <i class="fas fa-globe"></i>
+                            <span class="lang-text" data-i18n="language">EN</span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="video-background">
+            <video autoplay muted loop id="heroVideo">
+                <source src="videos/pixnova-raw_33056208d3a7ccde55ddbde4ad7a736a.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-logo">
+                <img src="images/logo.png" alt="SnapeX">
+            </div>
+            <p class="hero-subtitle" data-i18n="hero_subtitle">الحل الرقمي الأذكى للكافيهات والمطاعم</p>
+            <a href="#about" class="cta-button" data-i18n="get_started">ابدأ الآن</a>
+            
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <span class="scroll-mouse">
+                    <span class="scroll-wheel"></span>
+                </span>
+                <span class="scroll-arrow">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="aboutTitle">من نحن</h2>
+            <div class="about-content about-content--static">
+                <p class="about-intro" data-i18n="aboutIntro">
+                    شركة SnapeX هي منصّة ذكية بتقدّم حلول رقمية مبتكرة لإدارة المطاعم والكافيهات , هدفنا هو تمكين عملائنا من إدارة أعمالهم بسهولة وفعالية من خلال منصات رقمية ذكية، آمنة، وسريعة الاستخدام، بدون أي تعقيدات تقنية.
+                </p>
+                <ul class="about-list">
+                    <!-- Dynamic list items will be inserted here by JavaScript -->
+                </ul>
+            </div>
+
+            <!--
+            Mission & Vision Cards (temporarily disabled)
+            <div class="about-cards">
+                <div class="about-card mission">
+                    <div class="about-card-header">
+                        <span class="about-badge"><i class="fas fa-star"></i></span>
+                        <h3 class="about-card-title">رسالتنا</h3>
+                    </div>
+                    <p class="about-card-text">
+                        إحنا مش بس شركة برمجة، إحنا شركاء نجاح. هدفنا نساعد الكافيهات والمطاعم إنهم يقدموا تجربة رقمية راقية وممتعة لعملائهم،
+                        نطوّر شكلهم الرقمي بدون تعقيد ونخلي المنيو والطلبات أبسط وأسرع.
+                    </p>
+                </div>
+
+                <div class="about-card vision">
+                    <div class="about-card-header">
+                        <span class="about-badge"><i class="fas fa-lightbulb"></i></span>
+                        <h3 class="about-card-title">رؤيتنا</h3>
+                    </div>
+                    <p class="about-card-text">
+                        نكون المنصة الأولى في تصميم وإدارة التجارب الرقمية لقطاع F&B، نوفر حلول QR ومنيو تفاعلي ديناميكي يتطور مع احتياجات العملاء.
+                    </p>
+                </div>
+            </div>
+            -->
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="services">خدماتنا</h2>
+            <div class="services-container" id="servicesContainer">
+                <!-- Services will be dynamically inserted here by services.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <link rel="stylesheet" href="css/features.css">
+    <section id="features" class="features-section" dir="rtl">
+        
+        <div class="dots dots-up"></div>
+        <div class="dots dots-down"></div>
+
+        <div class="container">
+            <h2 class="section-title" data-i18n="featuresTitle">مميزتنا</h2>
+            <div class="features-grid">
+                <div class="features-content">
+                    <!-- Features content will be dynamically rendered here by features.js -->
+                </div>
+
+                <div class="features-media">
+                    <!-- Simple Image Slider -->
+                    <div class="image-slider">
+                        <div class="slide active">
+                            <img src="images/Royal green.png" alt="Feature 1">
+                        </div>
+                        <div class="slide">
+                            <img src="images/prime.png" alt="Feature 2">
+                        </div>
+                        <div class="slide">
+                            <img src="images/modern black.png" alt="Feature 3">
+                        </div>
+                        <div class="slide">
+                            <img src="images/classic brown.png" alt="Feature 4">
+                        </div>
+                    </div>
+
+                    <!-- Phone Overlay -->
+                    <div class="phone-overlay">
+                        <video id="phoneVideo" class="phone-video" muted playsinline>
+                            <source src="videos/Royall.webm" type="video/webm">
+                            <source src="videos/prim.webm" type="video/webm">
+                            <source src="videos/modern.webm" type="video/webm">
+                            <source src="videos/classic.webm" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <script src="js/services.js"></script>
+    <script src="js/typing-animation.js"></script>
+    <script src="js/mobile-animations.js"></script>
+    <script src="js/features.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/main.js"></script>
+    
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits-section" dir="rtl">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefits-media">
+                    <img src="images/admin.png" alt="حلول متكاملة" class="benefits-image">
+                </div>
+
+                <div class="benefits-content">
+                    <h3 class="benefits-headline" data-i18n="benefitsTitle">لوحه ادارة خاصة بك </h3>
+                    <div class="benefits-text">
+
+                        
+                        <ul class="benefits-list">
+                        <p data-i18n="benefitsText1" class="benefitsText">واجهة سهلة واحترافية :</p>
+                        
+                            <li data-i18n="benefit1">مش محتاج تكون خبير تقني، كل شيء منظم وبسيط وبدون أي تعقيد.</li>
+                            
+                            <p data-i18n="benefitsText2" class="benefitsText">إدارة منتجات وعروض بذكاء :</p>
+                            <li data-i18n="benefit2">ضيف، عدّل واحذف منتجاتك وعروضك مع إمكانية التحكم بالأسعار والصور بسهولة تامة وتحت إدارتك الكاملة.</li>
+
+                            <p data-i18n="benefitsText3" class="benefitsText">إحصائيات وتقارير لحظية :</p>
+                            <li data-i18n="benefit3">لوحة تفاعلية تعرض حالة المنيو كاملة: من عدد المنتجات والأقسام لحد نسب التوفر والعروض.
+                                رؤية واضحة وسريعة تساعدك تتابع الأداء وتاخد قرارات دقيقة و بذكاء</li>
+
+                            <p data-i18n="benefitsText4" class="benefitsText">تخصيص كامل:</p>
+                            <li data-i18n="benefit4">تحكم في ألوان، لوجو، و اختيار شكل تصميمك عشان يتماشي مع هويه علامتك التجاريه</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Choices Section -->
+    <section id="design-choices" class="design-choices-section" dir="rtl">
+        <div class="container">
+            <div class="design-choices-grid">
+                <div class="design-choices-content">
+                    <h3 class="design-choices-headline" data-i18n="designChoicesTitle">تخصيص الألوان و QR خاص</h3>
+                    <div class="design-choices-text">
+                        <p data-i18n="designChoicesText1">من لوحة الإدارة تقدر تتحكم بسهولة في شكل موقعك وتضيف QR مميز لعلامتك:</p>
+                        <ul class="design-choices-list">
+                            <li data-i18n="designChoice1">تختار الألوان اللي تعبر عن هويتك البصرية وتناسب نشاطك.</li>
+                            <li data-i18n="designChoice2">إنشاء كود QR مخصص يوصّل عملاءك مباشرة لموقعك. </li>
+                            <li data-i18n="designChoice3">إمكانية تحميل الـ QR بجودة عالية لاستخدامه في المطبوعات أو على المنتجات. </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="design-choices-media">
+                    <img src="images/5888763831038101493.jpg" alt="تصاميم احترافية" class="design-choices-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose SnapeX Section -->
+    <section id="why-choose" class="why-choose-section" dir="rtl">
+        <div class="container">
+            <h2 class="section-title" data-i18n="whyChooseTitle">لماذا تختار SnapeX؟</h2>
+            <div class="why-choose-grid">
+                <div class="why-choose-content">
+                    <div class="why-choose-item" data-why-choose-item="modern">
+                        <div class="why-choose-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="why-choose-text">
+                            <h3 data-i18n="whyChooseModernTitle"> قيمة أعلى بتكلفة أقل</h3>
+                            <p data-i18n="whyChooseModernText">مع SnapeX هتاخد موقع احترافي كامل بإمكانيات ضخمة، بأسعار تنافسية من غير ما تدفع تكاليف جانبية زيادة ، أوفر من أي حل تاني في السوق .
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="why-choose-item" data-why-choose-item="sales">
+                        <div class="why-choose-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="why-choose-text">
+                            <h3 data-i18n="whyChooseSalesTitle">QR جاهز من لوحة الإدارة:</h3>
+                            <p data-i18n="whyChooseSalesText">مش محتاج تدور أو تدفع فلوس لحد يعمللك QR… كل حاجة من عندك في لوحة الإدارة بخطوة واحدة.</p>
+                        </div>
+                    </div>
+
+                    <div class="why-choose-item" data-why-choose-item="management">
+                        <div class="why-choose-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="why-choose-text">
+                            <h3 data-i18n="whyChooseManageTitle">قرارات أوضح</h3>
+                            <p data-i18n="whyChooseManageText">لوحة تفاعلية تعرض حالة المنيو كاملة برؤية واضحة وسريعة تساعدك تتابع الأداء وتاخد قرارات دقيقة و بذكاء.</p>
+                        </div>
+                    </div>
+
+                    <div class="why-choose-item" data-why-choose-item="interface">
+                        <div class="why-choose-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div class="why-choose-text">
+                            <h3 data-i18n="whyChooseOccasionsTitle">مواسم واحتفالات مختلفة: </h3>
+                            <p data-i18n="whyChooseOccasionsText">في كل مناسبة زي رمضان أو رأس السنة أو أي موسم مهم، بنجهّزلك شكل وزينة مميزة من غير ما تفكّر أو تتعب.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="why-choose-content">
+                    <div class="why-choose-item" data-why-choose-item="integration">
+                        <div class="why-choose-icon">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <div class="why-choose-text">
+                            <h3 data-i18n="whyChooseIntegrationTitle">تصميم مخصص لهويتك</h3>
+                            <p data-i18n="whyChooseIntegrationText">ألوان، شعار، واجهة متكاملة تعكس شخصية مشروعك وتسهل على العميل الطلب ويترك انطباع قوي.</p>
+                        </div>
+                    </div>
+
+                    <div class="why-choose-item" data-why-choose-item="analytics">
+                        <div class="why-choose-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <div class="why-choose-text">
+                            <h3 data-i18n="whyChooseAnalyticsTitle"> إدارة بدون تعقيد </h3>
+                            <p data-i18n="whyChooseAnalyticsText">لوحة تحكم واحدة تكفيك تتحكم في كل حاجة: منتجاتك، أسعارك، عروضك، والـ QR كمان.</p>
+                        </div>
+                    </div>
+
+                    <div class="why-choose-item" data-why-choose-item="interface">
+                        <div class="why-choose-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div class="why-choose-text">
+                            <h3 data-i18n="whyChooseInterfaceTitle">تطوير مستمر:</h3>
+                            <p data-i18n="whyChooseInterfaceText">إحنا مش بنقف عند مستوى واحد، طول ما انت معانا، بتلاقي تحديثات جديدة وخدمات أذكى تساعدك تكبر وتنجح أكتر.</p>
+                        </div>
+                    </div>
+
+                    <div class="why-choose-item" data-why-choose-item="interface">
+                        <div class="why-choose-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div class="why-choose-text">
+                            <h3 data-i18n="whyChooseserviceTitle">شريك نجاح مش مجرد خدمة: </h3>
+                            <p data-i18n="whyChooseserviceText">وجودك معانا مش علاقة عميل وخدمة… دي شراكة بنكبر بيها مع بعض.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Evolution Timeline Section -->
+    <section id="evolution" class="evolution-section" dir="rtl">
+        <div class="container">
+            <h2 class="section-title" data-i18n="evolutionTitle">تطورتنا</h2>
+            <div class="timeline">
+                <div class="timeline-line">
+                    <div class="timeline-progress"></div>
+                </div>
+                
+                <div class="timeline-item" data-version="V1">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="version1Title"> Version 1</h3>
+                        <p data-i18n="version1Text">أطلقنا أول نسخة من Snapex بخطوة قوية، بميزة إنشاء قوائم QR تفاعلية بسيطة وسهلة الاستخدام، مع واجهة أنيقة تناسب جميع أنواع المطاعم و كافيهات وتخلي تجربة العميل أسهل وأوضح. انشأنا اول تصميمين كبدايه Modern و  Classic و كانت البداية اللي فتحت الطريق للتطوير والابتكار.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-version="V2">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="version2Title"> Version 2</h3>
+                        <p data-i18n="version2Text">وسعنا التجربة أكتر، وأطلقنا تصاميم جديدة زي Royal و Prime بجانب Modern و  Classic ، وأضافنا لوحة تحكم متطورة تُمكنك من:</p>
+                        <p data-i18n="version2Text2">1- إنشاء QR مخصص مباشرة من لوحة الإدارة بدون أي تكلفة إضافية.</p>
+                        <p data-i18n="version2Text3">2- متابعة إحصائيات دقيقة وتحليلات شاملة للمنيو والمبيعات.</p>
+                        <p data-i18n="version2Text4">3- أدوات تسهل عليك إدارة الطلبات واتخاذ قرارات مبنية على بيانات حقيقية.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-version="V3">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="version3Title"> Version 3 قريباً...</h3>
+                        <p data-i18n="version3Text">استعدوا للجيل الجديد من Snapex... حيث نصنع قفزة حقيقية تنقلك من مجرد موقع لإدارة الطلبات، إلى منصة متكاملة ذكية مدعومة بتقنيات حديثة، بواجهات أسرع، مرونة أكبر، وتخصيص أعمق لمشروعك.
+                            نحن لا نطور نسخة جديدة فقط… نحن نعيد صياغة تجربة كاملة هتغير شكل السوق.</p>
+                        <div class="timeline-video">
+                            <video class="timeline-video-ar" loop playsinline preload="auto" onerror="console.error('Error loading Arabic video')">
+                                <source src="videos/comingsoonar.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <video class="timeline-video-en" loop playsinline preload="auto" style="display: none;" onerror="console.error('Error loading English video')">
+                                <source src="videos/comingsoonen.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="video-controls" style="display: none;">
+                                <button class="video-mute"><i class="fas fa-volume-up"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Steps Section 
+    <section id="work-steps" class="work-steps-section" dir="rtl">
+        <div class="container">
+            <h2 class="section-title" data-i18n="workStepsTitle">خطوات العمل</h2>
+            <p class="section-subtitle" data-i18n="workStepsSubtitle">كيف نعمل لتحقيق أفضل النتائج لعملائنا</p>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 data-i18n="step1Title">التحليل والتخطيط</h3>
+                        <p data-i18n="step1Text">نقوم بدراسة متطلباتك وتحليلها بعناية لوضع خطة عمل متكاملة</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 data-i18n="step2Title">التصميم والتطوير</h3>
+                        <p data-i18n="step2Text">نصمم الحل التقني الأمثل ونقوم بتنفيذه بأحدث التقنيات</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 data-i18n="step3Title">الاختبار والتحسين</h3>
+                        <p data-i18n="step3Text">نختبر الحل بدقة ونقوم بتحسينه لضمان الأداء الأمثل</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3 data-i18n="step4Title">التسليم والدعم</h3>
+                        <p data-i18n="step4Text">نسلمك المشروع مع توفير الدعم الفني والاستشارات اللازمة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    -->
+    <!-- Vision & Mission Section -->
+    <section class="vision-mission-section">
+        <div class="container">
+            <div class="vision-mission-grid">
+                <!-- Vision Box -->
+                <div class="vision-box">
+                    <div class="box-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h2 data-i18n="visionTitle">رؤيتنا</h2>
+                    <p data-i18n="visionText">نكون المنصة الأولى في مصر والشرق الأوسط اللي بتغير شكل تجربة المنيو من ورقي أو QR ثابت  لموقع تفاعلي ديناميكي بيكبر ويتطور مع البراند.</p>
+                </div>
+                
+                <!-- Mission Box -->
+                <div class="mission-box">
+                    <div class="box-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h2 data-i18n="missionTitle">رسالتنا</h2>
+                    <p data-i18n="missionText">إحنا مش مجرد شركة برمجة… إحنا شركاء نجاح. هدفنا نساعد الكافيهات والمطاعم إنهم يقدموا تجربة راقية ومختلفة لعملائهم، تخليهم يفتكروا المكان مش بس عشان الطعم… لكن كمان عشان التجربة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <link rel="stylesheet" href="css/vision-mission.css">
+    
+    <!-- Footer -->
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="video-container" id="whatsappVideo">
+            <video autoplay muted  playsinline class="brand-video">
+                <source src="videos/prand.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                                <!-- Get Started Box -->
+                <div class="footer-col get-started-box">
+                    <div class="get-started-content">
+                        <i class="fas fa-rocket"></i>
+                        <h3 data-i18n="readyToStart">جاهز للبدء؟</h3>
+                        <p data-i18n="startYourJourney">ابدأ رحلتك معنا اليوم واستمتع بأفضل الحلول التقنية</p>
+                        <a href="javascript:void(0)" class="btn-get-started" data-i18n="getStarted" id="whatsappButton">ابدأ الآن</a>
+                    </div>
+                </div>
+                
+                <!-- About Column -->
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="SnapeX Logo" class="footer-logo-img">
+                        
+                    </div>
+                    <p data-i18n="footerAbout">نحن نقدم حلولاً تقنية مبتكرة تساعد الشركات على النمو والازدهار في العصر الرقمي.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link fb" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                            <span class="social-tooltip">Facebook</span>
+                        </a>
+                        <a href="https://wa.me/966501234567" class="social-link wa" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                            <span class="social-tooltip">WhatsApp</span>
+                        </a>
+                        <a href="#" class="social-link ig" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span class="social-tooltip">Instagram</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links Column -->
+                <div class="footer-col">
+                    <h3 class="footer-heading" data-i18n="quickLinks">روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home" data-i18n="home">الرئيسية</a></li>
+                        <li><a href="#about" data-i18n="about">من نحن</a></li>
+                        <li><a href="#services" data-i18n="services">خدماتنا</a></li>
+                        <li><a href="#features" data-i18n="features">مميزتنا</a></li>
+                        <li><a href="#evolution" data-i18n="evolution">تطورتنا</a></li>
+
+                    </ul>
+                </div>
+                
+        
+                
+                <!-- Contact Column -->
+                <div class="footer-col">
+                    <h3 class="footer-heading" data-i18n="contactUs">تواصل معنا</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+966501234567">+966 50 123 4567</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@snapx.com">info@snapx.com</a>
+                        </li>
+                    </ul>
+                </div>
+                
+
+            </div>
+            
+            <!-- Copyright Bar -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-bottom-content">
+                        <p class="copyright" data-i18n="copyright">© 2025 SnapeX. جميع الحقوق محفوظة</p>
+                        <div class="footer-bottom-links">
+                            <a href="#" data-i18n="privacyPolicy">سياسة الخصوصية</a>
+                            <span class="divider">|</span>
+                            <a href="#" data-i18n="termsOfService">شروط الخدمة</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    
+    <script>
+        // Navigation Active State and Smooth Scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            // Navigation functionality
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all links
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                    
+                    // Smooth scroll to section
+                    const targetId = this.getAttribute('href');
+                    if (targetId !== '#') {
+                        const targetSection = document.querySelector(targetId);
+                        if (targetSection) {
+                            window.scrollTo({
+                                top: targetSection.offsetTop - 100,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+            
+            // Update active link on scroll
+            window.addEventListener('scroll', function() {
+                let fromTop = window.scrollY + 150;
+                
+                navLinks.forEach(link => {
+                    const targetId = link.getAttribute('href');
+                    // Skip if href is empty or just '#'
+                    if (!targetId || targetId === '#') return;
+                    
+                    try {
+                        const section = document.querySelector(targetId);
+                        if (section) {
+                            if (section.offsetTop <= fromTop && 
+                                section.offsetTop + section.offsetHeight > fromTop) {
+                                navLinks.forEach(l => l.classList.remove('active'));
+                                link.classList.add('active');
+                            }
+                        }
+                    } catch (e) {
+                        console.warn('Could not find section:', targetId);
+                    }
+                });
+            });
+            
+            // Function to update video based on language
+            function updateVideoLanguage(lang) {
+                const arVideo = document.querySelector('.timeline-video-ar');
+                const enVideo = document.querySelector('.timeline-video-en');
+                
+                if (lang === 'ar') {
+                    if (arVideo) arVideo.style.display = 'block';
+                    if (enVideo) enVideo.style.display = 'none';
+                } else {
+                    if (arVideo) arVideo.style.display = 'none';
+                    if (enVideo) enVideo.style.display = 'block';
+                }
+            }
+            
+            // Handle language switch
+            document.addEventListener('langChange', function(e) {
+                updateVideoLanguage(e.detail.lang);
+            });
+            
+            // Initial video language setup
+            const initialLang = document.documentElement.getAttribute('lang') || 'ar';
+            updateVideoLanguage(initialLang);
+            
+            // Force re-render services after all scripts are loaded
+            if (window.renderServices) {
+                const currentLang = document.documentElement.getAttribute('lang') || 'ar';
+                window.renderServices(currentLang);
+            }
+            
+            // Back to Top Button
+            const backToTopButton = document.getElementById('backToTop');
+            if (backToTopButton) {
+                window.addEventListener('scroll', () => {
+                    if (window.pageYOffset > 300) {
+                        backToTopButton.classList.add('show');
+                    } else {
+                        backToTopButton.classList.remove('show');
+                    }
+                });
+                
+                backToTopButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+        });
+    </script>
+    
+    <!-- Footer CSS -->
+    <style>
+        /* Footer Styles */
+        .footer {
+            background-color: black;
+            color: #ffffff;
+            padding: 70px 0 0;
+            font-family: 'Cairo', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+           /* height: 4px;
+            background: linear-gradient(135deg, #4f46e5, #8b5cf6);*/
+            border: 1px solid #222222;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .footer-col {
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .footer-col:hover {
+            transform: translateY(-5px);
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            gap: 12px;
+        }
+        
+        .footer-logo-img {
+    /* width: 48px; */
+    height: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+        }
+        
+        .footer-logo:hover .footer-logo-img {
+            transform: rotate(5deg) scale(1.05);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+        .footer-logo-img::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #D4AF37, transparent);
+            border-radius: 2px;
+        }
+
+        
+        
+        .footer-col p {
+            color: #b3b3b3;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+        
+        .footer-heading {
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .footer-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 2px;
+            background-color: #4CAF50;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #b3b3b3;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: block;
+            padding: 5px 0;
+        }
+        
+        .footer-links a:hover {
+            color: #4CAF50;
+            padding-right: 10px;
+        }
+        
+        .contact-info {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .contact-info li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            color: #b3b3b3;
+            line-height: 1.6;
+        }
+        
+        .contact-info i {
+            color: #4CAF50;
+            margin-left: 15px;
+            margin-top: 5px;
+            font-size: 18px;
+            min-width: 20px;
+        }
+        
+        .contact-info a {
+            color: #b3b3b3;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-info a:hover {
+            color: #4CAF50;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        
+        .social-link {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            color: #ffffff;
+        }
+        
+        /* Facebook Styling */
+        .social-link.fb {
+            background: #3b5998;
+            box-shadow: 0 4px 8px rgba(59, 89, 152, 0.3);
+        }
+        
+        /* WhatsApp Styling */
+        .social-link.wa {
+            background: #25D366;
+            box-shadow: 0 4px 8px rgba(37, 211, 102, 0.3);
+        }
+        
+        /* Instagram Styling */
+        .social-link.ig {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            box-shadow: 0 4px 8px rgba(188, 24, 136, 0.3);
+        }
+        
+        /* Hover Effects */
+        .social-link:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .social-link.fb:hover { background: #4c70ba; }
+        .social-link.wa:hover { background: #2fe878; }
+        .social-link.ig:hover { 
+            background: linear-gradient(45deg, #ff9a3e, #ed6b4a, #e1306c, #c13584); 
+        }
+        
+        /* Tooltip */
+        .social-tooltip {
+            position: absolute;
+            top: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #333;
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            z-index: 10;
+        }
+        
+        .social-tooltip::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 5px 5px 0;
+            border-style: solid;
+            border-color: #333 transparent transparent;
+        }
+        
+        .social-link:hover .social-tooltip {
+            opacity: 1;
+            visibility: visible;
+            top: -40px;
+        }
+        
+        /* Get Started Box Styles */
+        .get-started-box {
+            background: linear-gradient(135deg, rgb(0 39 255 / 40%), #6b34cd42);
+            border: 1px solid #4e69ff;
+            border-radius: 12px;
+            padding: 25px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .get-started-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), transparent);
+            z-index: 0;
+        }
+        
+        .get-started-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        
+        .get-started-box i {
+            font-size: 36px;
+            color: #566fff;
+            margin-bottom: 15px;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        
+        .get-started-box h3 {
+            color: #ffffff;
+            font-size: 22px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .get-started-box p {
+            color: #b3b3b3;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .btn-get-started {
+            display: inline-block;
+            background: linear-gradient(135deg, #6610ff, #2a41c6);
+            color: #ffffff;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgb(11 19 63);
+        }
+        
+        .nav-link {
+            color: var(--light-color);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            right: 0;
+            background-color: var(--secondary-color);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+            right: auto;
+            left: 0;
+        }
+        
+        .nav-link.active {
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+        
+        .btn-get-started:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px #3F51B5;
+            color: #ffffff;
+        }
+        
+        /* Hover effects for the get started box */
+        .get-started-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border-color: rgb(12 49 255);
+        }
+        
+        .get-started-box:hover i {
+            transform: rotate(15deg) scale(1.1);
+        }
+        
+        .footer-bottom {
+            background-color: #111111;
+            padding: 20px 0;
+            border-top: 1px solid #2a2a2a;
+            margin-top: 40px;
+        }
+        
+        .footer-bottom-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .copyright {
+            color: #888;
+            margin: 0;
+            font-size: 14px;
+        }
+        
+        .footer-bottom-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .footer-bottom-links a {
+            color: #888;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-bottom-links a:hover {
+            color: #4CAF50;
+        }
+        
+        .divider {
+            color: #444;
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--secondary-color);
+            color: #1a1a1a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            text-decoration: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px #3F51B5;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+        
+        .footer-about {
+            color: #b3b3b3;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #2d2d2d;
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-heading {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-heading::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #b3b3b3;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: block;
+            padding: 5px 0;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary-color);
+            padding-right: 5px;
+        }
+        
+        .contact-info {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .contact-info li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            color: #b3b3b3;
+            line-height: 1.6;
+        }
+        
+        .contact-info i {
+            color: var(--secondary-color);
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+        
+        .contact-info a {
+            color: #b3b3b3;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-info a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .footer-bottom {
+            background-color: #0f0f0f;
+            padding: 20px 0;
+            border-top: 1px solid #2d2d2d;
+        }
+        
+        .footer-bottom-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .copyright {
+            color: #b3b3b3;
+            margin: 0;
+            font-size: 14px;
+        }
+        
+        .footer-bottom-links {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .footer-bottom-links a {
+            color: #b3b3b3;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-bottom-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .divider {
+            color: var(--secondary-color);
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--secondary-color);
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            text-decoration: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        /* Responsive styles for the get started box */
+        @media (max-width: 992px) {
+            .get-started-box {
+                grid-column: 1 / -1;
+                text-align: center;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .footer {
+                padding-top: 50px;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .footer-bottom-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-bottom-links {
+                margin-top: 10px;
+            }
+            
+            .back-to-top {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</body>
+</html>
