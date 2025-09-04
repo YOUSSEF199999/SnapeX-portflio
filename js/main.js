@@ -64,6 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
       hero_subtitle: "The Smart Digital Solution for Cafés & Restaurants",
       language: "عربي",
       aboutTitle: "About Us",
+      pay: "Payment methods",
       aboutIntro:
         "SnapeX is a smart platform that provides innovative digital solutions for managing restaurants and cafés. Our goal is to empower our clients to run their businesses easily and efficiently through smart, secure, and user-friendly digital platforms—without any technical complications.",
       aboutFeatures: aboutFeatures.en,
@@ -214,6 +215,7 @@ document.addEventListener("DOMContentLoaded", function () {
       hero_subtitle: "الحل الرقمي الأذكى للكافيهات والمطاعم",
       language: "EN",
       aboutTitle: "من نحن",
+      pay: "طرق الدفع ",
       aboutIntro:
         "شركة SnapeX هي منصّة ذكية بتقدّم حلول رقمية مبتكرة لإدارة المطاعم والكافيهات , هدفنا هو تمكين عملائنا من إدارة أعمالهم بسهولة وفعالية من خلال منصات رقمية ذكية، آمنة، وسريعة الاستخدام، بدون أي تعقيدات تقنية.",
       aboutFeatures: aboutFeatures.ar,
