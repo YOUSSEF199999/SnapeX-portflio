@@ -610,6 +610,17 @@ document.addEventListener("DOMContentLoaded", function () {
             const vid = entry.target;
             if (vid.id === "phoneVideo") {
               initVideoSequence();
+            } else if (vid.id === "heroVideo") {
+              // Load and attempt to play hero only when visible
+              try {
+                vid.load();
+                const playPromise = vid.play();
+                if (playPromise && typeof playPromise.then === 'function') {
+                  playPromise.catch(() => {/* autoplay may be blocked; ignore */});
+                }
+              } catch (e) {
+                console.warn("Could not start hero video", e);
+              }
             } else {
               // For timeline videos, trigger load and let user click to play
               try {
@@ -628,11 +639,52 @@ document.addEventListener("DOMContentLoaded", function () {
     lazyVideos.forEach((vid) => observer.observe(vid));
   }
 
+  // Detect WebP support
+  function canUseWebp() {
+    try {
+      const elem = document.createElement("canvas");
+      if (!!(elem.getContext && elem.getContext("2d"))) {
+        return elem.toDataURL("image/webp").indexOf("data:image/webp") === 0;
+      }
+      return false;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  // Upgrade PNG/JPG to WebP when available without breaking loading
+  function upgradeImagesToWebp() {
+    if (!canUseWebp()) return;
+    const imgs = document.querySelectorAll('img[data-webp]');
+    imgs.forEach((img) => {
+      const webpUrl = img.getAttribute('data-webp');
+      if (!webpUrl) return;
+      // Check existence first to avoid broken images
+      fetch(webpUrl, { method: 'HEAD' })
+        .then((res) => {
+          if (res.ok) {
+            // Only swap when offscreen or idle to avoid jank
+            const doSwap = () => {
+              img.src = webpUrl;
+            };
+            if ('requestIdleCallback' in window) {
+              requestIdleCallback(doSwap, { timeout: 1000 });
+            } else {
+              setTimeout(doSwap, 0);
+            }
+          }
+        })
+        .catch(() => {
+          // silently ignore; fallback PNG/JPG stays
+        });
+    });
+  }
+
   // Initialize lazy video loading after DOM ready
   if (document.readyState === "complete" || document.readyState === "interactive") {
-    setTimeout(setupLazyVideos, 300);
+    setTimeout(() => { upgradeImagesToWebp(); setupLazyVideos(); }, 300);
   } else {
-    window.addEventListener("DOMContentLoaded", () => setTimeout(setupLazyVideos, 300));
+    window.addEventListener("DOMContentLoaded", () => setTimeout(() => { upgradeImagesToWebp(); setupLazyVideos(); }, 300));
   }
 
   // Initialize video controls after a small delay to ensure DOM is ready
