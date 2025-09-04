@@ -1,0 +1,27 @@
+# Global security headers
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+
+# HTML should not be cached for long; force revalidation
+/*.html
+  Cache-Control: no-cache, no-store, must-revalidate
+
+# Long-term cache for static assets (immutable)
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/videos/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Common static file extensions as a catch-all
+/*.(css|js|png|jpg|jpeg|webp|gif|svg|ico|mp4|webm|mp3|wav)
+  Cache-Control: public, max-age=31536000, immutable

@@ -587,17 +587,52 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Initialize video sequence when the page loads
-  if (
-    document.readyState === "complete" ||
-    document.readyState === "interactive"
-  ) {
-    // Call after a short delay to ensure the video element is ready
-    setTimeout(initVideoSequence, 1000);
+  // Lazy load videos (phone video + timeline videos) using IntersectionObserver
+  function setupLazyVideos() {
+    const lazyVideos = document.querySelectorAll('video[data-lazy="true"]');
+
+    if (!("IntersectionObserver" in window)) {
+      // Fallback: load immediately
+      lazyVideos.forEach((vid) => {
+        if (vid.id === "phoneVideo") initVideoSequence();
+        else {
+          // minimal load for timeline videos
+          vid.preload = "metadata";
+        }
+      });
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const vid = entry.target;
+            if (vid.id === "phoneVideo") {
+              initVideoSequence();
+            } else {
+              // For timeline videos, trigger load and let user click to play
+              try {
+                vid.load();
+              } catch (e) {
+                console.warn("Could not load lazy video", e);
+              }
+            }
+            obs.unobserve(vid);
+          }
+        });
+      },
+      { rootMargin: "200px 0px" }
+    );
+
+    lazyVideos.forEach((vid) => observer.observe(vid));
+  }
+
+  // Initialize lazy video loading after DOM ready
+  if (document.readyState === "complete" || document.readyState === "interactive") {
+    setTimeout(setupLazyVideos, 300);
   } else {
-    window.addEventListener("DOMContentLoaded", () => {
-      setTimeout(initVideoSequence, 1000);
-    });
+    window.addEventListener("DOMContentLoaded", () => setTimeout(setupLazyVideos, 300));
   }
 
   // Initialize video controls after a small delay to ensure DOM is ready

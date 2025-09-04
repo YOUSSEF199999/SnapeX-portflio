@@ -6,8 +6,10 @@
     <title>SnapeX - الحل الرقمي الأذكى للكافيهات والمطاعم</title>
     <link rel="icon" type="image/png" href="images/tablogo.png">
     <link rel="apple-touch-icon" href="images/tablogo.png">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/work-steps.css">
+    <link rel="preload" href="css/style.css?v=1" as="style">
+    <link rel="stylesheet" href="css/style.css?v=1">
+    <link rel="stylesheet" href="css/work-steps.css?v=1">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -17,7 +19,7 @@
             <nav class="navbar">
                 <div class="logo">
                     <a href="#" class="logo-link">
-                        <img src="images/logo.png" alt="SnapeX Logo" class="logo-img">
+                        <img src="images/logo.png" alt="SnapeX Logo" class="logo-img" loading="eager" decoding="async">
                     </a>
                 </div>
                 <div class="nav-links">
@@ -51,7 +53,7 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="video-background">
-            <video autoplay muted loop id="heroVideo">
+            <video autoplay muted loop id="heroVideo" playsinline preload="metadata">
                 <source src="videos/pixnova-raw_33056208d3a7ccde55ddbde4ad7a736a.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -59,7 +61,7 @@
         </div>
         <div class="hero-content">
             <div class="hero-logo">
-                <img src="images/logo.png" alt="SnapeX">
+                <img src="images/logo.png" alt="SnapeX" loading="eager" decoding="async">
             </div>
             <p class="hero-subtitle" data-i18n="hero_subtitle">الحل الرقمي الأذكى للكافيهات والمطاعم</p>
             <a href="#about" class="cta-button" data-i18n="get_started">ابدأ الآن</a>
@@ -147,22 +149,34 @@
                     <!-- Simple Image Slider -->
                     <div class="image-slider">
                         <div class="slide active">
-                            <img src="images/Royal green.png" alt="Feature 1">
+                            <picture>
+                                <source srcset="images/Royal green.webp" type="image/webp">
+                                <img src="images/Royal green.png" alt="Feature 1" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                         <div class="slide">
-                            <img src="images/prime.png" alt="Feature 2">
+                            <picture>
+                                <source srcset="images/prime.webp" type="image/webp">
+                                <img src="images/prime.png" alt="Feature 2" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                         <div class="slide">
-                            <img src="images/modern black.png" alt="Feature 3">
+                            <picture>
+                                <source srcset="images/modern black.webp" type="image/webp">
+                                <img src="images/modern black.png" alt="Feature 3" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                         <div class="slide">
-                            <img src="images/classic brown.png" alt="Feature 4">
+                            <picture>
+                                <source srcset="images/classic brown.webp" type="image/webp">
+                                <img src="images/classic brown.png" alt="Feature 4" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                     </div>
 
                     <!-- Phone Overlay -->
                     <div class="phone-overlay">
-                        <video id="phoneVideo" class="phone-video" muted playsinline>
+                        <video id="phoneVideo" class="phone-video" muted playsinline preload="none" data-lazy="true">
                             <source src="videos/Royall.webm" type="video/webm">
                             <source src="videos/prim.webm" type="video/webm">
                             <source src="videos/modern.webm" type="video/webm">
@@ -177,19 +191,22 @@
     
     
 
-    <script src="js/services.js"></script>
-    <script src="js/typing-animation.js"></script>
-    <script src="js/mobile-animations.js"></script>
-    <script src="js/features.js"></script>
-    <script src="js/timeline.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/services.js?v=1" defer></script>
+    <script src="js/typing-animation.js?v=1" defer></script>
+    <script src="js/mobile-animations.js?v=1" defer></script>
+    <script src="js/features.js?v=1" defer></script>
+    <script src="js/timeline.js?v=1" defer></script>
+    <script src="js/main.js?v=1" defer></script>
     
     <!-- Benefits Section -->
     <section id="benefits" class="benefits-section" dir="rtl">
         <div class="container">
             <div class="benefits-grid">
                 <div class="benefits-media">
-                    <img src="images/admin.png" alt="حلول متكاملة" class="benefits-image">
+                    <picture>
+                        <source srcset="images/admin.webp" type="image/webp">
+                        <img src="images/admin.png" alt="حلول متكاملة" class="benefits-image" loading="lazy" decoding="async">
+                    </picture>
                 </div>
 
                 <div class="benefits-content">
@@ -235,7 +252,10 @@
                 </div>
 
                 <div class="design-choices-media">
-                    <img src="images/5888763831038101493.jpg" alt="تصاميم احترافية" class="design-choices-image">
+                    <picture>
+                        <source srcset="images/5888763831038101493.webp" type="image/webp">
+                        <img src="images/5888763831038101493.jpg" alt="تصاميم احترافية" class="design-choices-image" loading="lazy" decoding="async">
+                    </picture>
                 </div>
             </div>
         </div>
@@ -371,11 +391,11 @@
                         <p data-i18n="version3Text">استعدوا للجيل الجديد من Snapex... حيث نصنع قفزة حقيقية تنقلك من مجرد موقع لإدارة الطلبات، إلى منصة متكاملة ذكية مدعومة بتقنيات حديثة، بواجهات أسرع، مرونة أكبر، وتخصيص أعمق لمشروعك.
                             نحن لا نطور نسخة جديدة فقط… نحن نعيد صياغة تجربة كاملة هتغير شكل السوق.</p>
                         <div class="timeline-video">
-                            <video class="timeline-video-ar" loop playsinline preload="auto" onerror="console.error('Error loading Arabic video')">
+                            <video class="timeline-video-ar" loop playsinline preload="none" data-lazy="true" onerror="console.error('Error loading Arabic video')">
                                 <source src="videos/comingsoonar.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
-                            <video class="timeline-video-en" loop playsinline preload="auto" style="display: none;" onerror="console.error('Error loading English video')">
+                            <video class="timeline-video-en" loop playsinline preload="none" data-lazy="true" style="display: none;" onerror="console.error('Error loading English video')">
                                 <source src="videos/comingsoonen.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -459,13 +479,14 @@
         </div>
     </section>
 
-    <link rel="stylesheet" href="css/vision-mission.css">
+    <link rel="stylesheet" href="css/vision-mission.css?v=1">
     
     <!-- Footer -->
     <!-- Video Section -->
     <section class="video-section">
         <div class="video-container" id="whatsappVideo">
-            <video autoplay muted  playsinline class="brand-video">
+            <video autoplay muted playsinline preload="metadata" class="brand-video">
+                <source src="videos/prand.webm" type="video/webm">
                 <source src="videos/prand.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -488,7 +509,7 @@
                 <!-- About Column -->
                 <div class="footer-col">
                     <div class="footer-logo">
-                        <img src="images/logo.png" alt="SnapeX Logo" class="footer-logo-img">
+                        <img src="images/logo.png" alt="SnapeX Logo" class="footer-logo-img" loading="lazy" decoding="async">
                         
                     </div>
                     <p data-i18n="footerAbout">نحن نقدم حلولاً تقنية مبتكرة تساعد الشركات على النمو والازدهار في العصر الرقمي.</p>
