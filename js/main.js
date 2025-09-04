@@ -507,7 +507,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to open WhatsApp with pre-filled message
   function openWhatsApp() {
-    const phoneNumber = "201063716940";
+    const phoneNumber = "201069397545";
     const message = encodeURIComponent("مرحبا اريد الاستفسار عن شئ");
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
   }
